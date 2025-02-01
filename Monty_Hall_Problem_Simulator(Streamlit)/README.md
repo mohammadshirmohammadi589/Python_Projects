@@ -32,34 +32,6 @@ This Python application uses Streamlit to simulate the Monty Hall problem and vi
         *   Calculate whether the player wins or loses for both the "switch" and "no-switch" strategies.
         *   Return the number of wins for each strategy.
 
-## `monty_hall.py` (Example Implementation - You'll need to create this file)
+# Licence
 
-```python
-import random
-
-def simulate_games(num_games):
-    wins_with_switching = 0
-    wins_without_switching = 0
-
-    for _ in range(num_games):
-        # 1. Randomly choose the door with the car (0, 1, or 2)
-        car_door = random.randint(0, 2)
-
-        # 2. Player randomly chooses a door
-        player_choice = random.randint(0, 2)
-
-        # 3. Host reveals a door that is not the car door and not the player's choice
-        available_doors = [i for i in range(3) if i != car_door and i != player_choice]
-        revealed_door = random.choice(available_doors)
-
-        # 4. Player can switch or stay
-        # If switching:
-        switch_choice = [i for i in range(3) if i != player_choice and i != revealed_door][0]
-
-        # Determine wins:
-        if switch_choice == car_door:
-            wins_with_switching += 1
-        if player_choice == car_door:
-            wins_without_switching += 1
-            
-    return wins_with_switching, wins_without_switching
+MIT
