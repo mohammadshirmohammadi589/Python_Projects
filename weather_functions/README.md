@@ -1,46 +1,51 @@
+# Weather Forecast CLI
 
-import argparse
-import json
-import datetime
-import sys
+This is a command-line interface (CLI) application for displaying weather forecasts.
 
+## Setup
 
-def load_weather_data():
-    with open('weather_data.json', 'r') as file:
-        return json.load(file)
+1. Ensure Python 3.8 or higher is installed on your system.
+2. Place `weather_functions.py` and `weather_main.py` in the same directory.
+3. Create a `weather_data.json` file with the weather data in the following format:
 
+```json
+{
+  "CityName": {
+    "current_condition": "Sunny",
+    "condition_percent": "10",
+    "forecast": [
+      {"date": "2023-11-07", "condition": "Partly Cloudy", "high": 20, "low": 10},
+      // ... more forecast data
+    ]
+  },
+  // ... other cities
+}
+```
 
-def display_all_weather_data(weather_data):
-    for city, data in weather_data.items():
-        print(f"{city}: {data['condition_percent']}% {data['current_condition']}")
+## Usage
 
+Run the `weather_main.py` script using Python with the desired arguments:
 
-def display_forecast(city, weather_data):
-    if city in weather_data:
-        print(f"5-day forecast for {city}:")
-        for day in weather_data[city]['forecast']:
-            print(f"  Date: {day['date']}, Condition: {day['condition']}, High: {day['high']}°C, Low: {day['low']}°C")
-    else:
-        print(f"No forecast available for {city}.")
+```bash
+python weather_main.py --all
+python weather_main.py --city "CityName"
+python weather_main.py --city "CityName" --forecast
+python weather_main.py --city "CityName" --details
+python weather_main.py --show-logs
+```
 
+### Arguments
 
-def display_details(city, weather_data):
-    if city in weather_data:
-        print(f"Weather details for {city}:")
-        print(f"  Current condition: {weather_data[city]['current_condition']}")
-        print(f"  Condition percent: {weather_data[city]['condition_percent']}%")
-        display_forecast(city, weather_data)
-    else:
-        print(f"No details available for {city}.")
+- `--all`: Display all weather data.
+- `--city`: Specify the city name for which to display weather information.
+- `--forecast`: Display the 5-day forecast for the specified city (must be used with `--city`).
+- `--details`: Display all available weather details for the specified city (must be used with `--city`).
+- `--show-logs`: Show command logs for a specified time period.
 
+## Logs
 
-def show_logs():    
-    with open('command.log', 'r') as log_file:
-        for line in log_file:
-            print(line.strip())
+Logs of the executed commands are stored in `command.log`, with each entry timestamped.
 
+---
 
-def log_command(command):
-    with open('command.log', 'a') as log_file:
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d")
-        log_file.write(f"{timestamp}: {command}\n")
+Enjoy your personalized weather forecast CLI!
