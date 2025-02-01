@@ -39,3 +39,5 @@ This Python program simulates a basic bank account management system. It allows 
     *   `display()`: Displays the account holder's name and current balance.
     *   `deposit()`: Allows the account holder to deposit money.
     *   `withdraw()`: Allows the account holder to withdraw money.  It checks if there are sufficient funds before processing the withdrawal.
+# Licence
+MIT
