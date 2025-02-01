@@ -1,12 +1,6 @@
 This is a simple number guessing game implemented using Python's Tkinter library for the graphical user interface. The player guesses a number between 1 and 100, and the game provides feedback.
+ 
 
-How to Run
-Clone the repository:
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git) # Replace with your repo URL
-Navigate to the project directory:
-cd NumberGuessingGameTkinter
-Run the script:
-python number_guessing_game.py  # Or whatever you named your Python file
 # How to Play
 The game window will appear.
 Enter your guess in the entry box.
