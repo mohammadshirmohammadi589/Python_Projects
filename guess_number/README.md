@@ -51,14 +51,6 @@ This game is very basic and needs significant improvements to be fully functiona
 
 *   Python 3.x (with the `tkinter` library, which is usually included with Python)
 
-## Contributing
-
-Contributions are welcome! Please submit pull requests.
-
-## Author
-
-YOUR_NAME
-
 ## License
 
-[Choose a license, e.g., MIT License]
+ MIT License]
