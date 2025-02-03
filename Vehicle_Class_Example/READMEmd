@@ -1,0 +1,45 @@
+# Vehicle Class Example
+
+This Python program demonstrates a simple `Vehicle` class. It shows how to create vehicle objects, display their information, and use class-level variables to track the total number of vehicles created.
+
+## How to Run
+
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git) # Replace with your repo URL
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd VehicleClassExample
+    ```
+3.  Run the script:
+    ```bash
+    python vehicle.py  # Or whatever you named your Python file
+    ```
+
+## How to Use
+
+The program is designed for demonstration. When you run it, it will:
+
+1.  Create two `Vehicle` objects: `car1` and `car2`.
+2.  Display the information (make, model, and year) for each vehicle.
+3.  Print the total number of vehicles created.
+
+You can modify the code to create more `Vehicle` objects with different attributes and experiment with the class methods.
+
+## Code Explanation
+
+*   **`Vehicle` Class:**
+    *   `total_vehicles`: A class-level variable that keeps track of the total number of `Vehicle` objects created. It's initialized to 0.
+    *   `__init__(self, make, model, year)`: The constructor (initializer) for the `Vehicle` class. It takes the make, model, and year as arguments and assigns them to the corresponding instance variables.  It also calls the `update_total_vehicles()` class method to increment the vehicle count.
+    *   `update_total_vehicles()` (class method): A class method that increments the `total_vehicles` counter whenever a new `Vehicle` object is created. Class methods are called on the class itself (e.g., `Vehicle.update_total_vehicles()`) rather than on an instance of the class.
+    *   `display_vehicle()`: A method that prints the make, model, and year of a `Vehicle` object.
+
+*   The code then creates two `Vehicle` objects (`car1` and `car2`), calls the `display_vehicle()` method for each object, and prints the total number of vehicles using the class variable `Vehicle.total_vehicles`.
+
+## Requirements
+
+*   Python 3.x
+
+## License
+ MIT License
