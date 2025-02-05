@@ -3,13 +3,20 @@ Welcome to the Python Projects repository! This repository contains a collection
 
 
 
+# 🤝 Contributing
+We welcome contributions from the community! If you have a project you'd like to add to this repository, please open a pull request. We'll review your project and merge it into the repository if it meets our standards.
 
-
-
-# Contribution
-Feel free to contribute to this repository by adding new projects, improving existing ones, or suggesting enhancements. Fork the repository, create a new branch, make your changes, and submit a pull request.
 
 # License
 This repository is licensed under the MIT License - see the LICENSE file for details.
+
+
+# 📞 Contact Information
+
+Feel free to reach out to us!
+
+📧 Email: [mohammadshirmohammadi589@gmail.com](mailto:mohammadshirmohammadi589@gmail.com)
+💬 Telegram: [shirmohammadi](https://t.me/shirmohammadi)
+
 
 ## Happy coding!
