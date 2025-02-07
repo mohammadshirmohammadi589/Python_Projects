@@ -1,6 +1,6 @@
-# Vehicle Class Example
+# Car Booking System
 
-This Python program demonstrates a simple `Vehicle` class. It shows how to create vehicle objects, display their information, and use class-level variables to track the total number of vehicles created.
+This Python program implements a simple car booking system. It allows users to make bookings, display all bookings, search for bookings, cancel bookings, and view booking details.
 
 ## How to Run
 
@@ -10,36 +10,47 @@ This Python program demonstrates a simple `Vehicle` class. It shows how to creat
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd VehicleClassExample
+    cd CarBookingSystem
     ```
 3.  Run the script:
     ```bash
-    python vehicle.py  # Or whatever you named your Python file
+    python car_booking.py  # Or whatever you named your Python file
     ```
 
 ## How to Use
 
-The program is designed for demonstration. When you run it, it will:
+The program is interactive and runs in the console. Here's how to use it:
 
-1.  Create two `Vehicle` objects: `car1` and `car2`.
-2.  Display the information (make, model, and year) for each vehicle.
-3.  Print the total number of vehicles created.
-
-You can modify the code to create more `Vehicle` objects with different attributes and experiment with the class methods.
+1.  When you run the script, you'll be prompted to enter a command.
+2.  Available commands:
+    *   `help`: Displays help text explaining the commands.
+    *   `booking`: Makes a new booking. You'll be prompted to enter your name, start date, and end date.  Dates should be in YYYY-MM-DD format.
+    *   `display`: Displays all bookings.
+    *   `search`: Searches for a booking by code or name.
+    *   `cancel`: Cancels a booking by code.
+    *   `details`: Displays details about the bookings (total cars, booked cars, available cars).
+    *   `exit`: Exits the program.
+3.  Enter the command and any required arguments.
+4.  The program will execute the command and provide feedback.
 
 ## Code Explanation
 
-*   **`Vehicle` Class:**
-    *   `total_vehicles`: A class-level variable that keeps track of the total number of `Vehicle` objects created. It's initialized to 0.
-    *   `__init__(self, make, model, year)`: The constructor (initializer) for the `Vehicle` class. It takes the make, model, and year as arguments and assigns them to the corresponding instance variables.  It also calls the `update_total_vehicles()` class method to increment the vehicle count.
-    *   `update_total_vehicles()` (class method): A class method that increments the `total_vehicles` counter whenever a new `Vehicle` object is created. Class methods are called on the class itself (e.g., `Vehicle.update_total_vehicles()`) rather than on an instance of the class.
-    *   `display_vehicle()`: A method that prints the make, model, and year of a `Vehicle` object.
+The program uses a dictionary called `bookings` to store booking information. The keys of the dictionary are booking codes (integers), and the values are dictionaries containing the booking details (name, start date, end date, number of days).
 
-*   The code then creates two `Vehicle` objects (`car1` and `car2`), calls the `display_vehicle()` method for each object, and prints the total number of vehicles using the class variable `Vehicle.total_vehicles`.
+The program defines several functions to handle the different commands:
 
-## Requirements
+*   `help()`: Displays the help text.
+*   `validate_date(input_date)`: Validates the date format (YYYY-MM-DD) and date values.
+*   `find_days(start_date, end_date)`: Calculates the number of days between two dates.
+*   `booking()`: Creates a new booking and adds it to the `bookings` dictionary.
+*   `cancel(code_del)`: Cancels a booking by removing it from the `bookings` dictionary.
+*   `display()`: Displays all bookings.
+*   `search()`: Searches for a booking by code or name.
+*   `search_by_code(code_s)`: Searches for a booking by code.
+*   `search_by_name(name)`: Searches for a booking by name.
+*   `details()`: Displays booking details.
 
-*   Python 3.x
+The main part of the program is a `while True` loop that continuously prompts the user for commands until the user enters "exit".
 
 ## License
  MIT License
