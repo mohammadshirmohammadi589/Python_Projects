@@ -55,9 +55,14 @@ Contributions to improve the Fake News Detector are welcome. Please follow these
 
 Fork the repository
 Create a new branch (git checkout -b feature/AmazingFeature)
+
 Make your changes
+
 Commit your changes (git commit -m 'Add some AmazingFeature')
+
 Push to the branch (git push origin feature/AmazingFeature)
+
 Open a Pull Request
+
 # Disclaimer
 This tool is for educational and research purposes only. It should not be used as the sole source for determining the credibility of news. Always cross-verify information from multiple reliable sources.
