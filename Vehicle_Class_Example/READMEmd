@@ -16,7 +16,6 @@ This Python program implements a simple car booking system. It allows users to m
     ```bash
     python car_booking.py  # Or whatever you named your Python file
     ```
-
 ## How to Use
 
 The program is interactive and runs in the console. Here's how to use it:
